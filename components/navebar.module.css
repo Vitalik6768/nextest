@@ -1,0 +1,200 @@
+
+
+.header {
+  background-color: #333;
+  color: white;
+  /* padding: 20px 0;  */
+  text-align: center;
+  padding-top: 20px;
+  height: 100px;
+  
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.nav ul li {
+  display: inline;
+  margin: 0 10px;
+  
+}
+
+.nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+
+/* MEGA MENUE */
+
+
+
+
+/* .megamenu {
+  display: none;
+  background-color: blueviolet;
+  padding: 20px;
+  z-index: 111;
+  position: absolute;
+  width: auto;
+  min-height: auto;
+  max-height: auto;
+  top: 58%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+} */
+
+.megamenu {
+  display: none; /* Initially hidden */
+  background-color: blueviolet;
+  padding: 20px;
+  z-index: 111;
+  position: absolute;
+  left: 50%; /* Start at the middle of the parent */
+  transform: translateX(-50%); /* Shift it back by half of its own width */
+  width: 900px; /* Adjust width based on content */
+
+  min-height: auto;
+  max-height: 90vh; /* Maximum height */
+  overflow-y: auto; /* Enable vertical scrolling if content exceeds max height */
+  box-sizing: border-box; /* Include padding and border in the element's total dimensions */
+}
+
+
+
+
+.megamenu :hover .megamenu {
+  display: block;
+}
+
+
+/* a:hover + .megamenu {
+  display: block;
+  
+} */
+
+
+
+
+
+
+.div1 {
+  background-color: blue;
+  display: none;
+}
+
+.div2 {
+  display: none;
+  background-color: rgb(255, 0, 140);
+}
+
+
+
+
+.linkcontainer {
+  position: relative;
+  display: inline-block;
+
+
+   /* Adjust as needed */
+
+  
+}
+
+.triangle {
+  display: none;
+
+  width: 0;
+  height: 0;
+  margin-left: 30%;
+  border-left: 10px solid transparent; /* Smaller width for left border */
+  border-right: 10px solid transparent; /* Smaller width for right border */
+  border-bottom: 20px solid blueviolet; /* Smaller width for bottom border */
+}
+
+.linkcontainer:hover .triangle{
+  display: block;
+}
+
+.linkcontainer:hover + .megamenu{
+  display: block;
+}
+
+
+
+
+/* .contentcontainer {
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 20px; 
+  max-height: 20%;
+ 
+
+}
+
+.contentcontainer div, .contentcontainer h1, .contentcontainer p {
+  margin: 0; 
+  padding: 5px; 
+  max-height: 20%;
+}  */
+
+
+
+
+/* .contentcontainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+  gap: 20px;
+  height: 200px;
+} */
+
+.contentcontainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: minmax(100px, auto); /* This sets a minimum height for rows */
+  gap: 20px;
+  justify-content: center;
+
+}
+
+.contentcontainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start; /* Ensures that items are aligned at their top edge */
+  gap: 20px; /* Adjust as needed */
+}
+
+.contentcontainer > div {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
+  align-items: baseline;
+}
+
+/* Assuming you add a <div class="spacer"></div> before your content in each grid item */
+.contentcontainer > div > .spacer {
+  height: 70px; /* Adjust this value to control how much the content is lowered */
+}
+
+
+
+/* Add a class for the li element in your CSS module */
+
+
+.menuItem:hover .megamenu {
+  display: block;
+
+}
+
+.menuItem:hover .triangle {
+  display: block;
+  
+}
